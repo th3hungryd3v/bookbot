@@ -21,5 +21,5 @@ def sort_counts(char_counts):
         if char.isalpha(): # Just letters of the alphabet
             sorted_counts.append({'char': char, 'count': count}) # add alpha to sorted counts using these keys/value pairs
 
-sorted_counts.sort(key=lambda item: item['count'], reverse=True)
-return sorted_counts
+    sorted_counts.sort(key=lambda item: item['count'], reverse=True)
+    return sorted_counts

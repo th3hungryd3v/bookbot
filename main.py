@@ -1,5 +1,6 @@
 from stats import word_count
 from stats import character_count
+from stats import sort_counts
 
 def get_book_text(filepath):
     with open(filepath) as f:
@@ -11,7 +12,7 @@ def main():
     book_text = get_book_text(filepath)
     count_words = word_count(book_text)
     char_count = character_count(book_text)
-    sorted_char_counts = sort_counts(book_text)
+    sortedcounts = sort_counts(char_count)
     
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {filepath}...")
@@ -19,9 +20,10 @@ def main():
     print(f"Found {count_words} total words")
     print("--------- Character Count -------")
 
-    for i in sorted_char_counts:
-        print(f"{item['char']}: {item['count']}")
-    print(============= END ===============)
+    for i in sortedcounts:
+        print(f"{i['char']}: {i['count']}")
+    print("============= END ===============")
     
+
 main()
 
