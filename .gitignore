@@ -1,5 +1,6 @@
 # Directory
 /books
-
+__pycache__
 # Books
 frankenstein.txt
+
