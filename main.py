@@ -11,9 +11,17 @@ def main():
     book_text = get_book_text(filepath)
     count_words = word_count(book_text)
     char_count = character_count(book_text)
-    print(f"{count_words} words found in the document")
-    print(f"Character Count:")
-    print(f"{char_count}")
+    sorted_char_counts = sort_counts(book_text)
+    
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {filepath}...")
+    print("----------- Word Count ----------")
+    print(f"Found {count_words} total words")
+    print("--------- Character Count -------")
 
+    for i in sorted_char_counts:
+        print(f"{item['char']}: {item['count']}")
+    print(============= END ===============)
+    
 main()
 
